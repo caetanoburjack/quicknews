@@ -16,7 +16,7 @@ interface HomeProps {
 }
 
 export default function Home({ product }: HomeProps) {
-  console.log(product)
+  //console.log(product)
   return (
     <>
       <Head>
@@ -60,6 +60,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       product
     },
-    revalidate: 60 * 60 * 24,//24 horas
+    revalidate: 60 * 60 * 24,// 60 (segundo) * 60 (minutos) * 24 (horas) = 24 horas
   }
 }
