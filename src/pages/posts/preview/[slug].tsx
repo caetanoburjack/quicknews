@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next"
+import { GetStaticPaths, GetStaticProps } from "next"
 import Head from "next/head"
 import { RichText } from "prismic-dom"
 import Link from 'next/link'
@@ -53,9 +53,13 @@ export default function PostPreview({ post }: PostPreviewProps) {
     )
 }
 
-export const getStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
     return {
-        paths: [],
+        paths: [
+            {
+                params: { slug: 'chromecast-com-google-tv-que-bela-surpresa-com-4k' }
+            }
+        ],
         fallback: 'blocking'
     }
 }
