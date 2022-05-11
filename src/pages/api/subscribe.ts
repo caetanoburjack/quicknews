@@ -25,7 +25,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
                 )
             )
         )
-
+        console.log(session)
         let customerId = user.data.stripe_customer_id
         if (!customerId) {
             const stripeCustomer = await stripe.customers.create({
@@ -49,7 +49,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             payment_method_types: ['card'],
             billing_address_collection: 'required',
             line_items: [
-                { price: 'price_1JzofDF6Sk7RiJrEcDjYmILh', quantity: 1 }
+                { price: 'price_1KyK4iF6Sk7RiJrEcdS3WR2Q', quantity: 1 }
             ],
             mode: 'subscription',
             allow_promotion_codes: true,
