@@ -1,5 +1,5 @@
 # Quick News
-System developed in ReactJS and Typescript with the framework NextJS.
+System developed using ReactJS and Typescript with the framework NextJS.
 
 The backend was provided by Prismic and the data storage by FaunaDB.
 

@@ -1,8 +1,6 @@
-import { query as q } from 'faunadb'
-
 import NextAuth from "next-auth"
-import { session } from 'next-auth/client'
 import Providers from "next-auth/providers"
+import { query as q } from 'faunadb'
 import { fauna } from '../../../services/fauna'
 
 export default NextAuth({
